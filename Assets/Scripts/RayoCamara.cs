@@ -10,14 +10,15 @@ public class RayoCamara : MonoBehaviour
     {    
         if(Input.GetButtonDown("Fire1"))
         {
-        FixedUpdate();
+        Rayo();
         }
         }
 
-    void FixedUpdate()
+    void Rayo()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
 
         if(Physics.Raycast (ray, out hit, Mathf.Infinity))
         {
