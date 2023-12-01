@@ -24,4 +24,19 @@ textTimer.text = "" + timer.ToString("f1");
 }
 
 */
+
+void Start()
+    {
+        StartCoroutine(ExampleCoroutine());
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        Debug.Log("5" + Time.time);
+
+        yield return new WaitForSeconds(5);
+
+        Debug.Log("5" + Time.time);
+    }
+
 }
