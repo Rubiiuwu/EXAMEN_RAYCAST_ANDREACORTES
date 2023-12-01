@@ -32,11 +32,19 @@ void Start()
 
     IEnumerator ExampleCoroutine()
     {
-        Debug.Log("5" + Time.time);
-
+        Debug.Log("5");
         yield return new WaitForSeconds(5);
-
-        Debug.Log("5" + Time.time);
+        Debug.Log("4");
+        
+        yield return new WaitForSeconds(4);
+        Debug.Log("3");
+        
+        yield return new WaitForSeconds(3);
+        Debug.Log("2");
+        
+        yield return new WaitForSeconds(2);
+        Debug.Log("1");
+        
     }
 
 }
